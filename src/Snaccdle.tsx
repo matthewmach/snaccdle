@@ -1,5 +1,5 @@
 import Select from 'react-select'
-//import Header from './header'
+import Header from './components/header'
 import {useEffect, useState} from 'react'
 import {useNavigate, useParams, useLocation} from 'react-router-dom';
 
@@ -93,7 +93,8 @@ export default function Snaccdle() {
 
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center">    
+      <Header/>
       <div className="min-w-3xl">
         <iframe style={{clipPath: "inset(0 0 0 0 round 15px)"}} src={song.song} width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         {!done && (
